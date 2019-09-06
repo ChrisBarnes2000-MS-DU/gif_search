@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Gif Search
+{% endblock %}
+
+{% block content %}
+<form action='/'>
+    <p>
+        Search for a Gif?
+        <input type="text" name="search" />
+    </p>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
