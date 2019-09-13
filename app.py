@@ -39,7 +39,8 @@ def index():
     # which contains the GIFs as a list
     if button_request == "random":
         params["q"] = "random"
-        r = requests.get("https://api.tenor.com/v1/random?", params)
+        r = requests.get("https://api.tenor.com/v1/random?",
+                         params)
 
     if button_request == "trending":
         params["q"] = "trending"

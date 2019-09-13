@@ -6,6 +6,10 @@ nav {
 nav div {
   display: inline-flex;
 }
+.logo {
+  vertical-align: middle;
+  padding-left: 0 1em;
+}
 .btn-primary {
   color: #fff;
   background-color: #007bff;
@@ -14,8 +18,21 @@ nav div {
 }
 
 /* Gif containers */
+.tenor-gif-embed {
+  max-width: 32vw;
+  padding: 0;
+  margin: 0;
+}
 .gif_container {
   background-color: blue;
   border: 2px solid black;
+  width: fit-content;
+  display: inline-flex;
 }
 /* footer */
+footer {
+  background-color: aliceblue;
+  position: absolute;
+  left: 0;
+  right: 0;
+}

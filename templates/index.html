@@ -39,6 +39,9 @@ content %}
     </form>
   </div>
 </nav>
-{% for gif in gifs %}
+{% if gif in gifs %} {% for gif in gifs %}
 <div class="gif_container">{% include 'gif.html' %}</div>
-{% endfor %} {% endblock %}
+{% endfor %} {% else %}
+<h1>(0w0)</h1>
+<h2>Wooks wike we don't have any gifs for dat. Pwease twy again!</h2>
+{% endif %} {% endblock %}
