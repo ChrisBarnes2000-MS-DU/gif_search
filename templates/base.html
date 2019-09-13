@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
+  <html>
     <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="/static/style.css">
-        <title>{% block title %}{% endblock %}</title>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" type="text/css" href="/static/style.css" />
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+      />
+
+      <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
-        {% block content %}{% endblock %}
-        <!-- Include the Tenor JavaScript to fill in GIFs appropriately -->
-        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      {% block content %}{% endblock %}
+      <!-- Include the Tenor JavaScript to fill in GIFs appropriately -->
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
     </body>
+  </html>
 </html>

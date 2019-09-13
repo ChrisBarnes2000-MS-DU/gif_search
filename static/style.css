@@ -1,0 +1,21 @@
+/* navbar */
+nav {
+  background-color: aliceblue;
+}
+
+nav div {
+  display: inline-flex;
+}
+btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  margin: 0 0.5em;
+}
+
+/* Gif containers */
+.gif_container {
+  background-color: blue;
+  border: 2px solid black;
+}
+/* footer */

@@ -1,22 +1,35 @@
 {% extends 'base.html' %} {% block title %} Gif Search {% endblock %} {% block
 content %}
-<h1>Gif Search</h1>
+<nav>
+  <div class="logo">
+    <h1>Gif it to me!</h1>
+  </div>
+  <div class="form_container">
+    <form action="/">
+      <p>
+        <!-- Search for a Gif? -->
+        <input
+          class="typeahead"
+          type="text"
+          name="search"
+          placeholder="Type something please"
+        />
+        <button type="submit" class="btn btn-primary">Search</button>
+      </p>
+    </form>
 
-<form action="/">
-  <p>
-    Search for a Gif?
-    <input
-      class="typeahead"
-      type="text"
-      name="search"
-      placeholder="Type something please"
-    />
-    <button type="submit">Submit</button>
-  </p>
-</form>
-
-<form action="/">
-  <button type="submit" name="button" value="random">Random Gifs</button>
-</form>
-
-{% for gif in gifs %} {% include 'gif.html' %} {% endfor %} {% endblock %}
+    <form action="/">
+      <button
+        type="submit"
+        name="button"
+        value="random"
+        class="btn btn-primary"
+      >
+        Random Gifs
+      </button>
+    </form>
+  </div>
+</nav>
+{% for gif in gifs %}
+<div class="gif_container">{% include 'gif.html' %}</div>
+{% endfor %} {% endblock %}
