@@ -5,11 +5,20 @@
 {% endblock %}
 
 {% block content %}
+<h1>Gif Search</h1>
+
 <form action='/'>
     <p>
         Search for a Gif?
-        <input type="text" name="search" />
+        <input class="typeahead" type="text" name="search" placeholder="Type something please"/>
+        <button type="submit">Submit</button>
     </p>
-    <button type="submit">Submit</button>
 </form>
+
+<form action='/'>
+    <button type="submit" name="button" value="random">Random Gifs</button>
+</form>
+
+{% for gif in gifs %} {% include 'gif.html' %} {% endfor %}
+
 {% endblock %}
