@@ -1,20 +1,22 @@
-{% extends "base.html" %} {% block title %} Gif Search {% endblock %} {% block
+{% extends 'base.html' %} {% block title %} Gif Search {% endblock %} {% block
 content %}
-<form class="form-inline">
-  <label>Search Gifs</label>
-  <input
-    type="text"
-    class="form-control gif-input"
-    name="q"
-    value="cats"
-    placeholder="search gifs"
-  />
-  <input type="hidden" name="api_key" value="RXN4HC41NO0K" />
-  <input type="submit" value="Go!" class="btn btn-primary" />
+<h1>Gif Search</h1>
+
+<form action="/">
+  <p>
+    Search for a Gif?
+    <input
+      class="typeahead"
+      type="text"
+      name="search"
+      placeholder="Type something please"
+    />
+    <button type="submit">Submit</button>
+  </p>
 </form>
-{% if gif.status_code == 200 %}
-<p>status code = 200</p>
-{{ gif[index] }}
-{% for value in values %} {% endfor %} {% else %}
-<p>Status code does not equal 200</p>
-{% endif %} {% endblock %}
+
+<form action="/">
+  <button type="submit" name="button" value="random">Random Gifs</button>
+</form>
+
+{% for gif in gifs %} {% include 'gif.html' %} {% endfor %} {% endblock %}
