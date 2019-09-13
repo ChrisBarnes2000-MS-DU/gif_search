@@ -41,6 +41,10 @@ def index():
         params["q"] = "random"
         r = requests.get("https://api.tenor.com/v1/random?", params)
 
+    if button_request == "trending":
+        params["q"] = "trending"
+        r = requests.get("https://api.tenor.com/v1/trending?", params)
+
     print(r.status_code)
 
     gifs = json.loads(r.content)['results']
