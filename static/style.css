@@ -1,3 +1,6 @@
+body {
+  text-align: center !important;
+}
 /* navbar */
 nav {
   background-color: aliceblue;
@@ -31,8 +34,12 @@ nav div {
 }
 /* footer */
 footer {
-  background-color: aliceblue;
+  background-color: gray;
   position: absolute;
   left: 0;
   right: 0;
+}
+
+footer h1 {
+  margin: 0;
 }
