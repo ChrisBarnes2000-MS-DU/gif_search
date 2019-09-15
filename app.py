@@ -1,12 +1,17 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 import requests
 import json
 
 app = Flask(__name__)
 
+NAMES = ["abc", "abcd", "abcde", "abcdef"]
 apikey = "RXN4HC41NO0K"
 limit = 10
 
+
+@app.route('/autocomplete', methods=['GET'])
+def autocomplete():
+    search = request.args.get('autocomplete')
 
 @app.route('/')
 def index():

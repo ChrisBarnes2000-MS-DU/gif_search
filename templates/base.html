@@ -35,12 +35,18 @@
         src="https://tenor.com/embed.js"
       ></script>
       <script>
-      $('#scrollable-dropdown-menu .typeahead').typeahead(null, {
-          name: 'countries',
-          limit: 10,
-          source: countries
+        $(function () {
+          $.ajax({
+            url: '{{ url_for("autocomplete") }}'
+          }).done(function (data) {
+            $('#autocomplete').autocomplete({
+              source: data.json_list,
+              minLength: 2
+            });
+          });
         });
       </script>
     </body>
   </html>
 </html>
+
