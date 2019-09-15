@@ -3,6 +3,8 @@
   <html>
     <head>
       <meta charset="UTF-8" />
+      <script src="https://kit.fontawesome.com/2e2cc60c11.js"></script>
+      <!-- I know this is in a weird place but the new Font awesome docs says to put this in the head, I'm just follwing the docs -->
       <link rel="stylesheet" type="text/css" href="/static/style.css" />
       <link
         rel="stylesheet"
@@ -17,7 +19,15 @@
       {% block content %}{% endblock %}
       <!-- Include the Tenor JavaScript to fill in GIFs appropriately -->
       <footer>
-        <h1>Made with &#x2764; by Chris and Luke</h1>
+        <h1>
+          Made with &#x2764; by Chris
+          <a href="http://github.com/chrisBarnes7404/"
+            ><i class="fab fa-github"></i
+          ></a>
+          and Luke
+          <a href="http://github.com/LukazDane/"><i class="fab fa-github"></i>
+          </a>
+        </h1>
       </footer>
       <script
         type="text/javascript"

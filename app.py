@@ -5,7 +5,7 @@ import json
 app = Flask(__name__)
 
 apikey = "RXN4HC41NO0K"
-lmt = 10
+limit = 10
 
 
 @app.route('/')
@@ -21,7 +21,7 @@ def index():
         # b) your API key, 'key'
         "apikey": "RXN4HC41NO0K",
         # c) how many GIFs to return, 'limit'
-        "lmt": 10
+        "limit": 10
     }
     button_request = request.args.get('button')
 

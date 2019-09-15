@@ -10,8 +10,8 @@ nav div {
   display: inline-flex;
 }
 .logo {
-  vertical-align: middle;
-  padding-left: 0 1em;
+  /* vertical-align: middle; */
+  display: block;
 }
 .btn-primary {
   color: #fff;
@@ -42,4 +42,8 @@ footer {
 
 footer h1 {
   margin: 0;
+}
+
+.fab {
+    color: black;
 }
