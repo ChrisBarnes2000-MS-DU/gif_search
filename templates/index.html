@@ -4,7 +4,6 @@ content %}
   <div class="logo">
     <h1>Gif it to me!</h1>
     <!-- <img src="/assets/logo.png" alt="logo" width=42px/> -->
-
   </div>
   <div class="form_container">
     <form action="/">
@@ -12,7 +11,7 @@ content %}
         <!-- Search for a Gif? -->
         <input
           class="typeahead"
-          type="text" 
+          type="text"
           name="search"
           placeholder="Type something please"
         />
@@ -41,6 +40,12 @@ content %}
     </form>
   </div>
 </nav>
-{% for gif in gifs %}
+{% if gifs %} {% for gif in gifs %}
 <div class="gif_container">{% include 'gif.html' %}</div>
-{% endfor %} {% endblock %}
+{% endfor %} {% else %}
+<h1>UwU</h1>
+<p>
+  Wooks wike there were no results for this search pwease twy again with a
+  difewent word!
+</p>
+{% endif %} {% endblock %}
