@@ -48,4 +48,32 @@ content %}
   Wooks wike there were no results for this search pwease twy again with a
   difewent word!
 </p>
-{% endif %} {% endblock %}
+{% endif %}
+
+<script>
+  $('input[name="search"]').keyup(function () {
+
+    var searchterm = $(this).val();
+
+    if (searchterm.length > 0) {
+
+      var match = $('tr.data-row:contains("' + searchterm + '")');
+
+      var nomatch = $('tr.data-row:not(:contains("' + searchterm + '"))');
+
+      match.addClass('selected');
+
+      match.css("display", "");
+      nomatch.css("display", "none");
+
+    } else {
+
+      $('tr.data-row').css("display", "none");
+
+      $('tr.data-row').removeClass('selected');
+
+    }
+
+  });
+</script>
+{% endblock %}
