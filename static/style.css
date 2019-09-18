@@ -1,0 +1,50 @@
+body {
+  text-align: center !important;
+  background-color: #adb5bd !important;
+}
+/* navbar */
+nav {
+  background-color: aliceblue;
+}
+
+nav div {
+  display: inline-flex;
+}
+.logo {
+  /* vertical-align: middle; */
+  display: block;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  margin: 0 0.5em;
+}
+
+/* Gif containers */
+.tenor-gif-embed {
+  max-width: 32vw;
+  padding: 0;
+  margin: 0;
+}
+.gif_container {
+  background-color: blue;
+  border: 2px solid black;
+  width: fit-content;
+  display: inline-flex;
+}
+/* footer */
+footer {
+  background-color: gray;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+footer h1 {
+  margin: 0;
+}
+
+.fab {
+  color: black;
+}

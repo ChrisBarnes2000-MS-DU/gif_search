@@ -7,7 +7,6 @@ app = Flask(__name__)
 apikey = "RXN4HC41NO0K"
 limit = 10
 
-
 @app.route('/')
 def index():
     """Show the homepage."""
