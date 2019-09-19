@@ -2,8 +2,7 @@ body {
   text-align: center !important;
   background-color: #adb5bd !important;
 }
-/* navbar */
-nav {
+/* navbar  nav {
   background-color: aliceblue;
 }
 
@@ -11,9 +10,9 @@ nav div {
   display: inline-flex;
 }
 .logo {
-  /* vertical-align: middle; */
+   vertical-align: middle; 
   display: block;
-}
+} */
 .btn-primary {
   color: #fff;
   background-color: #007bff;
