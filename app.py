@@ -1,11 +1,17 @@
-from flask import Flask, request, render_template
-import requests
 import json
+import requests
+from flask import Flask, request, render_template
+import os
+
+from dotenv import load_dotenv
+load_dotenv()
+
 
 app = Flask(__name__)
 
-apikey = "RXN4HC41NO0K"
+TENOR_API_KEY = os.getenv("TENOR_API_KEY")
 limit = 10
+
 
 @app.route('/')
 def index():
@@ -18,7 +24,7 @@ def index():
         # a) the query term, 'q'
         "q": search,
         # b) your API key, 'key'
-        "apikey": "RXN4HC41NO0K",
+        "apikey": TENOR_API_KEY,
         # c) how many GIFs to return, 'limit'
         "limit": 10
     }
