@@ -2,9 +2,13 @@ from flask import Flask, request, render_template
 import requests
 import json
 import unittest
+import os 
+
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
-
+TENOR_API_KEY = os.getenv("TENOR_API_KEY")
 apikey = "RXN4HC41NO0K"
 limit = 10
 
